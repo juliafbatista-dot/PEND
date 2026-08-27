@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a1d5f4;
+    text-align: center;
+}
+
+.produto {
+    width: 150px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid black;
+    cursor: move;
+}
+
+#carrinho {
+    width: 300px;
+    min-height: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 2px dashed black;
+}
