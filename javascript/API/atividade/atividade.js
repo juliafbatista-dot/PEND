@@ -1,12 +1,44 @@
+// Obtendo localização
 navigator.geolocation.getCurrentPosition(
-    function (posicao) {
-        console.log("Latitude: ", posicao.coords.latitude);
-        console.log("Longitude: ", posicao.coords.longitude);
-        console.log("Precisão: ", posicao.coords.accuracy);
+    function(posicao) {
+
+        document.getElementById("latitude").textContent =
+            posicao.coords.latitude;
+
+        document.getElementById("longitude").textContent =
+            posicao.coords.longitude;
+
+        document.getElementById("precisao").textContent =
+            posicao.coords.accuracy;
+
+        document.getElementById("sucesso").style.display = "block";
+        document.getElementById("erro").style.display = "none";
+
     },
-    function (erro) {
-        console.log("Não foi possível obter a localização.", erro);
-        document.getElementById("erro").style.display = "block";
+
+    function(erro) {
+
+        console.log("Erro ao obter localização", erro);
+
         document.getElementById("sucesso").style.display = "none";
+        document.getElementById("erro").style.display = "block";
+
     }
 );
+
+
+navigator.mediaDevices.getUserMedia({
+    video: true,
+    audio: true
+})
+.then(function(stream) {
+
+    const video = document.getElementById("camera");
+    video.srcObject = stream;
+
+})
+.catch(function(erro) {
+
+    console.log("Erro ao acessar a câmera.", erro);
+
+});

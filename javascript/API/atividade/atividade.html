@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade - Geolocation</title>
+    <title>Confirmação de Entrega</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Atividade de Geolocation</h1>
-   
-    <div id="sucesso" style="display: block;">
-        <p>A sua localização foi obtida!</p>
-    <img src="https://cdn-icons-png.flaticon.com/512/2776/2776063.png" alt="Imagem de Sucesso" width="300">
+
+    <div class="container">
+        <h1>📦 Confirmação de Entrega Shoppe </h1>
+        <p>Permita o acesso à localização e à câmera para concluir a entrega.</p>
+
+        <div id="sucesso">
+            <p>✅ Localização obtida com sucesso!</p>
+        </div>
+
+        <div id="erro">
+            <p>❌ Não foi possível obter a localização.</p>
+        </div>
+
+        <video id="camera" autoplay></video>
+
+        <div class="dados">
+            <h3>Dados da Entrega</h3>
+            <p><strong>Latitude:</strong> <span id="latitude">-</span></p>
+            <p><strong>Longitude:</strong> <span id="longitude">-</span></p>
+            <p><strong>Precisão:</strong> <span id="precisao">-</span> metros</p>
+        </div>
     </div>
 
-    <div id="erro" style="display: none;">
-        <p>Não foi possível obter a localização.</p>
-        <img id="img-erro" src="https://www.shutterstock.com/image-vector/wrong-location-mark-symbol-white-260nw-2510166691.jpg" alt="Imagem de Erro" width="300">
-    </div>
-    <video id="camera" autoplay></video>
-
-    
     <script src="atividade.js"></script>
+
 </body>
 </html>
