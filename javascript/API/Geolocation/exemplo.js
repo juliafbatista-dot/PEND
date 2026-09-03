@@ -1,0 +1,12 @@
+navigator.geolocation.getCurrentPosition(
+    function (posicao) {
+        console.log("Latitude: ", posicao.coords.latitude);
+        console.log("Longitude: ", posicao.coords.longitude);
+        console.log("Precisão: ", posicao.coords.accuracy);
+    },
+    function (erro) {
+        console.log("Não foi possível obter a localização.", erro);
+        document.getElementById("erro").style.display = "block";
+        document.getElementById("sucesso").style.display = "none";
+    }
+);
