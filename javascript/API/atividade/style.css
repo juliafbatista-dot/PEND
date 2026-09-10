@@ -1,35 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #ff9100;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
-    background-color: rgb(255, 182, 86);
-    padding: 20px;
-    border-radius: 10px;
-    width: 500px;
-    text-align: center;
-}
-
-#camera {
+    background-color: #ffb656;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 500px;
     width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.dados {
-    margin-top: 15px;
-    text-align: left;
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+p {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#sucesso {
+    display: none;
+    color: #1b5e20;
+    background-color: #c8e6c9;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+#sucesso p {
+    margin: 0;
 }
 
 #erro {
     display: none;
-    color: red;
+    color: #b71c1c;
+    background-color: #ffcdd2;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
 }
 
-#sucesso {
-    color: green;
+#erro p {
+    margin: 0;
+}
+
+.camera-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#camera {
+    width: 100%;
+    max-height: 300px;
+    background-color: #000;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#botao {
+    background-color: #ee4d2d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+#botao:hover {
+    background-color: #d73211;
+}
+
+#canvas {
+    display: none;
+}
+
+#foto {
+    display: none;
+    width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    object-fit: cover;
+}
+
+.dados {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.dados h3 {
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.dados p {
+    margin-bottom: 5px;
 }

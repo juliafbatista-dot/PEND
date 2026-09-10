@@ -9,7 +9,7 @@
 <body>
 
     <div class="container">
-        <h1>📦 Confirmação de Entrega Shoppe </h1>
+        <h1>📦 Confirmação de Entrega Shopee</h1>
         <p>Permita o acesso à localização e à câmera para concluir a entrega.</p>
 
         <div id="sucesso">
@@ -20,7 +20,12 @@
             <p>❌ Não foi possível obter a localização.</p>
         </div>
 
-        <video id="camera" autoplay></video>
+        <div class="camera-box">
+            <video id="camera" autoplay playsinline></video>
+            <button id="botao">Tirar foto</button>
+            <canvas id="canvas"></canvas>
+            <img id="foto" alt="Sua foto aparecerá aqui">
+        </div>
 
         <div class="dados">
             <h3>Dados da Entrega</h3>
@@ -31,6 +36,5 @@
     </div>
 
     <script src="atividade.js"></script>
-
 </body>
 </html>
