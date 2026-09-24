@@ -1,4 +1,4 @@
-
+// Classe para gerenciar notícias
 class NewsToday {
 
     constructor(apiKey) {
@@ -8,7 +8,7 @@ class NewsToday {
         this.iniciarEventos();
         this.carregarNoticias();
     }
-
+// Método para iniciar eventos de clique nos links de categoria
     iniciarEventos() {
 
         const links = document.querySelectorAll("nav a");
@@ -27,7 +27,7 @@ class NewsToday {
         });
 
     }
-
+// Método para carregar notícias da API
     carregarNoticias(categoria = "") {
 
         this.containerNoticias.innerHTML =
@@ -39,7 +39,7 @@ class NewsToday {
         if (categoria) {
             url += `&topic=${categoria}`;
         }
-
+//adicionando tratamento de erro caso a requisição falhe
         fetch(url)
             .then(response => response.json())
             .then(data => {
@@ -64,7 +64,7 @@ class NewsToday {
             });
 
     }
-
+        // Método para criar o card de notícia
     criarCard(article) {
 
         const card = document.createElement("div");
@@ -87,7 +87,7 @@ class NewsToday {
     }
 
 }
-
+// Instancia a classe NewsToday com a chave de API
 const sistemaNoticias = new NewsToday(
     "20954b823cd1780b266abb12742119db"
 );
